@@ -34,7 +34,7 @@ func main() {
 		log.Printf("failed to subscribe to lrp events: " + err.Error())
 	}
 
-	subscriptionChan := make(chan events.EventSource, 1)
+	subscriptionChan := make(chan events.EventSource, 5)
 
 	var subscription events.EventSource
 
