@@ -46,6 +46,11 @@ func main() {
 			if subscription != nil {
 				for{
 					event, _ := subscription.Next()
+					
+					if err != nil {
+						fmt.Println("Error getting event: " + err.Error())
+					}
+					
 					fmt.Println(event.String())
 				}
 			}
