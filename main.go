@@ -45,7 +45,7 @@ func main() {
 		case subscription = <-subscriptionChan:
 			if subscription != nil {
 				for{
-					event, _ := subscription.Next()
+					event, err := subscription.Next()
 					
 					if err != nil {
 						fmt.Println("Error getting event: " + err.Error())
